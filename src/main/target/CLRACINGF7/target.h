@@ -57,10 +57,9 @@
 #define MPU6500_CS_PIN          SPI1_NSS_PIN
 #define MPU6500_SPI_INSTANCE    SPI1
 
-#define USE_MAG
-#define USE_MAG_HMC5883
-#define USE_MAG_QMC5883
-#define MAG_I2C_INSTANCE         (I2CDEV_2)
+#define USE_BARO
+#define USE_BARO_BMP280
+#define BARO_I2C_INSTANCE       (I2CDEV_2)
 
 #define USE_MAX7456
 #define MAX7456_SPI_INSTANCE    SPI3
@@ -108,7 +107,10 @@
 
 #define USE_I2C
 #define USE_I2C_DEVICE_2       // External I2C
-#define I2C_DEVICE               (I2CDEV_2)
+#define I2C_DEVICE              (I2CDEV_2)
+#define I2C2_SCL                NONE        // PB10 (UART3_TX)
+#define I2C2_SDA                NONE        // PB11 (UART3_RX)
+#define USE_I2C_PULLUP
 
 #define USE_SPI
 #define USE_SPI_DEVICE_1
